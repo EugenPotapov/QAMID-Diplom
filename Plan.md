@@ -136,5 +136,5 @@ Ryzen 7-5700u; 32GB RAM; Windows 11 Pro 22631.4169.
 
 ## Документация
 
-- [Чек-лист](https://github.com/EugenPotapov/QAMID-Diplom)
-- [Тест-кейсы](https://github.com/EugenPotapov/QAMID-Diplom)
+- [Чек-лист](https://github.com/EugenPotapov/QAMID-Diplom/blob/main/Cases.xlsx)
+- [Тест-кейсы](https://github.com/EugenPotapov/QAMID-Diplom/blob/main/Check.xlsx)
