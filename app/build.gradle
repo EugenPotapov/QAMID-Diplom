@@ -19,6 +19,7 @@ android {
         targetSdkVersion 32
         versionCode 14
         versionName "1.0.0"
+        testInstrumentationRunner "io.qameta.allure.android.runners.AllureAndroidJUnitRunner"
     }
 
     compileOptions {
@@ -47,6 +48,7 @@ android {
 }
 
 dependencies {
+
     def retrofit_version = "2.9.0"
     def retrofit_gson_version = "2.9.0"
     def okhttp_logging_version = "4.9.2"
@@ -62,7 +64,11 @@ dependencies {
     def gson_version = '2.9.0'
     def swipe_refresh_version = '1.1.0'
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    def allure_version = "2.4.0"
+    def espresso_version = "3.4.0"
+
+    implementation "androidx.tracing:tracing:1.1.0"
+    //implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_version"
     implementation "com.google.android.material:material:$material_version"
@@ -91,4 +97,19 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
+
+    androidTestImplementation "io.qameta.allure:allure-kotlin-model:$allure_version"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-commons:$allure_version"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-junit4:$allure_version"
+    androidTestImplementation "io.qameta.allure:allure-kotlin-android:$allure_version"
+    androidTestImplementation "joda-time:joda-time:2.12.1"
+    androidTestImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.0-beta01'
+    androidTestImplementation 'androidx.test:rules:1.6.0-beta01'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.0-beta01"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:3.6.0-beta01"
+
+    androidTestUtil "androidx.test:orchestrator:1.4.2"
 }
